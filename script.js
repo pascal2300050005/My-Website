@@ -6,18 +6,21 @@ function updateClock(){
     const s=String(now.getSeconds()).padStart(2, '0');
     const jam=`${h}:${m}:${s}`;
     document.getElementById('clock').innerText=jam;
-    if(h==00 && h<4){
-        document.getElementById('ket').innerHTML="Midnight";
-    }else if(h==4 && h<6){
-        document.getElementById('ket').innerHTML="Dawn";
-    }else if(h==6 && h<12){
-        document.getElementById('ket').innerHTML="Good Morning";
-    }else if(h==12 && h<15){
-        document.getElementById('ket').innerHTML="Good Afternoon";
-    }else if(h==15 && h<18){
-        document.getElementById('ket').innerHTML="Good Evening";
-    }else {
-        document.getElementById('ket').innerHTML="Good Night";
+    const hour = now.getHours();
+    let greeting = "";
+    if (hour >= 0 && hour < 4) {
+        greeting = "Midnight";
+    } else if (hour >= 4 && hour < 6) {
+        greeting = "Dawn";
+    } else if (hour >= 6 && hour < 12) {
+        greeting = "Good Morning";
+    } else if (hour >= 12 && hour < 15) {
+        greeting = "Good Afternoon";
+    } else if (hour >= 15 && hour < 18) {
+        greeting = "Good Evening";
+    } else {
+        greeting = "Good Night";
     }
+    document.getElementById('ket').innerHTML = greeting;
 }
 setInterval(updateClock, 1000);
