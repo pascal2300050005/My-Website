@@ -12,13 +12,37 @@ body{
 h1{
     text-align:center;
     color:#333;
+    height: 10px;
+    font-size: 14px;
     
     
 }
 h4{
     text-align:center;
     color:#666;
+    margin-top: 10px;body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:20px;
+    padding:20px;
+    background-color:#f4f4f4;
+}
+@media (max-width: 768px){
+    body{
+        flex-direction: column;
+    }
+}
+h1{
+    text-align:center;
+    color:#333;
+    height: 10px;
+    font-size: 14px;
     
+    
+}
+h4{
+    text-align:center;
+    color:#666;
+    margin-top: 10px;
 }
 #clock {
   color: #2196f3;
@@ -39,6 +63,44 @@ th{
 }
 .center{
     text-align:center;
+}
+footer{
+    text-align: center;
+    margin-top:50px;
+}
+h3{
+    color:#333;
+    text-align: left;
+
+}
+p{
+    color:#666;
+    text-align: left;
+}
+    font-size: 12px;
+}
+#clock {
+  color: #2196f3;
+  font-size: 2em;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  background: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+    margin-top:20px;
+    max-width: 800px;
+    margin: center;
+}
+th{
+    background-color:#4CAF50;
+}
+.center{
+    text-align:center;
+    font-size: 15px;
 }
 footer{
     text-align: center;
